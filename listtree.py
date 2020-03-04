@@ -15,7 +15,7 @@ class ListTree:
             if attr.startswith('__') and attr.endswith('__'):
                 result += spaces + '{0}\n'.format(attr)
             else:
-                result += spaces + '{0}={1}\n'.format(attr, getattr(obj, attr))
+                result += spaces + '%s=%s\n' % (attr, getattr(obj, attr))
         return result
 
     def __listclass(self, aClass, indent):
